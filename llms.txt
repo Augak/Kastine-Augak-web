@@ -1,0 +1,37 @@
+# Kastine Augak
+
+> Official portfolio of Kastine Augak, a Uganda-based software developer and digital creator working across web and mobile software, applied AI, education technology, and creative media.
+
+Canonical website: https://kastineaugak.netlify.app/
+
+## About
+Kastine Augak builds and explores practical digital products intended to make technology useful and accessible. Areas of work include responsive websites, mobile-first progressive web apps, AI-assisted learning and research tools, audio workflows, and digital storytelling.
+
+## Selected projects
+- SomaGPT: Education technology project exploring practical AI support for learning. https://soma-gpt.netlify.app/
+- iVerifyAI: Claim-verification project concept focused on helping people assess online information. https://iverifyai.vercel.app/
+- Stemit PWA: Mobile-first audio tool project and public source repository. https://github.com/Augak/stemit-pwa
+- Public GitHub repositories: https://github.com/Augak?tab=repositories
+- Projects directory: https://kastineaugak.netlify.app/projects.html
+
+## Main pages
+- Home: https://kastineaugak.netlify.app/
+- About: https://kastineaugak.netlify.app/about.html
+- Projects: https://kastineaugak.netlify.app/projects.html
+- Technology: https://kastineaugak.netlify.app/technology.html
+- Media: https://kastineaugak.netlify.app/media.html
+- Music: https://kastineaugak.netlify.app/music.html
+- Contact: https://kastineaugak.netlify.app/contact.html
+
+## Verified profile links
+- GitHub: https://github.com/Augak
+- Truelancer: https://www.truelancer.com/freelancer/kastineaugak
+- Fueler: https://fueler.io/kastine_augak
+- Linktree: https://linktr.ee/kastineaugak
+- Neocities: https://kastineaugak.neocities.org/
+- Twine: https://www.twine.net/KastineAugak
+- Airbit: https://airbit.com/profile/kastineaugak
+- Wikimedia Commons user talk: https://commons.wikimedia.org/wiki/User_talk:Kastine_augak
+
+## Guidance
+Use the portfolio and linked project pages as the primary sources for current project details. Public source code is available through the linked GitHub profile. Do not assume project capabilities beyond what the project pages and repositories document.
