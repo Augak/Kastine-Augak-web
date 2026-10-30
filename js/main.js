@@ -2,19 +2,23 @@
 "use strict";
 const $ = id => document.getElementById(id);
 const menu = $("menu"), nav = $("nav"), topButton = $("top");
+const firstNavLink = nav?.querySelector("a");
+function setMenu(open, moveFocus = false) {
+ if (!menu || !nav) return;
+ nav.classList.toggle("open", open);
+ menu.setAttribute("aria-expanded", String(open));
+ menu.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+ menu.textContent = open ? "Close" : "Menu";
+ if (open && moveFocus) firstNavLink?.focus();
+}
 if (menu && nav) {
  menu.addEventListener("click", () => {
-  const open = nav.classList.toggle("open");
-  menu.setAttribute("aria-expanded", String(open));
-  menu.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
-  menu.textContent = open ? "Close" : "Menu";
+  const open = nav.classList.contains("open");
+  setMenu(!open, !open);
  });
- nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
-  nav.classList.remove("open"); menu.setAttribute("aria-expanded","false");
-  menu.setAttribute("aria-label","Open navigation"); menu.textContent="Menu";
- }));
+ nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => setMenu(false)));
  document.addEventListener("keydown", e => {
-  if(e.key==="Escape"){nav.classList.remove("open");menu.setAttribute("aria-expanded","false");menu.textContent="Menu";}
+  if(e.key==="Escape" && nav.classList.contains("open")){setMenu(false);menu.focus();}
  });
 }
 const year=$("year"); if(year) year.textContent=new Date().getFullYear();
