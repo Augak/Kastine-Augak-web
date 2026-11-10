@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f3f0e7">
+<title>Book a consultation | Kastine Augak Soft tech</title>
+<meta name="description" content="Request an in-person or remote consultation with Kastine Augak Soft tech for software and app development, websites, IT support, and AI automation across Uganda.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://kastineaugak.netlify.app/bookings.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kastineaugak.netlify.app/bookings.html">
+<meta property="og:title" content="Book a consultation | Kastine Augak Soft tech">
+<meta property="og:description" content="Tell us what you need and request a consultation anywhere in Uganda.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bookings.css">
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="container nav">
+  <a class="logo" href="index.html" aria-label="Kastine Augak home"><span class="logo-mark">KA</span><span class="logo-name">Kastine Augak <b>Soft tech</b></span></a>
+  <button class="menu" id="menu" aria-label="Open navigation" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="navigation" id="nav" aria-label="Main navigation">
+   <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Work</a><a href="technology.html">Practice</a><a href="media.html">Media</a><a href="gallery.html">Gallery</a><a href="bookings.html" aria-current="page">Bookings</a><a href="contact.html">Contact</a>
+  </nav>
+ </div>
+</header>
+<main id="main">
+ <section class="booking-hero">
+  <div class="container booking-hero-grid">
+   <div>
+    <div class="crumb"><a href="index.html">Home</a> / Bookings</div>
+    <p class="eyebrow">KASTINE AUGAK SOFT TECH · UGANDA</p>
+    <h1>Let's make time<br><em>for your next idea.</em></h1>
+    <p class="booking-lead">Request a consultation for a website, software project, technical support or an AI-powered solution. We work with clients across Uganda, either in person or remotely.</p>
+    <div class="booking-points"><span>01 · Tell us what you need</span><span>02 · Choose how to meet</span><span>03 · We confirm availability</span></div>
+   </div>
+   <aside class="booking-aside">
+    <p class="eyebrow">WHAT WE CAN HELP WITH</p>
+    <h2>Practical digital services.</h2>
+    <ul><li>Software & mobile app development</li><li>Website design & development</li><li>IT support & digital solutions</li><li>AI solutions & automation</li></ul>
+    <div class="aside-note"><strong>Across Uganda</strong><span>On-site appointments and remote consultations are available by arrangement.</span></div>
+    <a class="text-link" href="https://wa.me/256741501270" target="_blank" rel="noopener noreferrer">Prefer WhatsApp? Message us ↗</a>
+   </aside>
+  </div>
+ </section>
+ <section class="section booking-section">
+  <div class="container booking-layout">
+   <div class="booking-intro">
+    <p class="eyebrow">REQUEST A CONSULTATION</p>
+    <h2>Tell us a little about your project.</h2>
+    <p>Share your preferred date and meeting format. Your request will be reviewed and we will contact you to confirm a suitable time.</p>
+    <div class="booking-assurance"><span aria-hidden="true">✓</span><p><strong>No automatic booking or payment.</strong><br>This form sends a request. Your appointment is confirmed only after we contact you.</p></div>
+    <p class="small-note">All dates and times are interpreted in East Africa Time (EAT, UTC+3).</p>
+   </div>
+   <form class="booking-form" name="soft-tech-booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="booking-received.html">
+    <input type="hidden" name="form-name" value="soft-tech-booking">
+    <input type="hidden" name="business" value="Kastine Augak Soft tech">
+    <p class="form-trap"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+    <div class="form-heading"><span>01</span><div><h3>Your details</h3><p>How can we reach you?</p></div></div>
+    <div class="form-grid">
+     <div class="field"><label for="full-name">Full name <span>*</span></label><input id="full-name" name="name" autocomplete="name" required maxlength="100" placeholder="Your name"></div>
+     <div class="field"><label for="phone">Phone / WhatsApp <span>*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="30" placeholder="+256 ..."></div>
+     <div class="field field-wide"><label for="email">Email address <span>*</span></label><input id="email" name="email" type="email" autocomplete="email" required maxlength="150" placeholder="you@example.com"></div>
+    </div>
+    <div class="form-heading"><span>02</span><div><h3>What do you need?</h3><p>Choose the service closest to your request.</p></div></div>
+    <div class="form-grid">
+     <div class="field field-wide"><label for="service">Service <span>*</span></label><select id="service" name="service" required><option value="">Select a service</option><option>Software and mobile app development</option><option>Website development</option><option>IT support and digital solutions</option><option>AI solutions and automation</option><option>Not sure yet — help me define it</option></select></div>
+     <div class="field field-wide"><label for="project">Briefly describe what you need <span>*</span></label><textarea id="project" name="project_details" rows="4" required maxlength="2000" placeholder="What are you trying to build, fix or improve?"></textarea></div>
+    </div>
+    <div class="form-heading"><span>03</span><div><h3>Plan the meeting</h3><p>Choose a preferred format, date and time.</p></div></div>
+    <div class="form-grid">
+     <div class="field field-wide"><label for="meeting">Meeting format <span>*</span></label><select id="meeting" name="meeting_format" required><option value="">Choose how to meet</option><option value="Remote consultation">Remote consultation (phone or online)</option><option value="In-person appointment">In-person appointment</option><option value="Either — whichever is available">Either — whichever is available</option></select></div>
+     <div class="field field-wide" id="location-field"><label for="location">Town, district or preferred meeting area</label><input id="location" name="meeting_location" maxlength="120" placeholder="e.g. Fort Portal, Kampala, Kasese"><small>Required for in-person appointments. We serve clients across Uganda.</small></div>
+     <div class="field"><label for="date">Preferred date <span>*</span></label><input id="date" name="preferred_date" type="date" required></div>
+     <div class="field"><label for="time">Preferred time (EAT) <span>*</span></label><input id="time" name="preferred_time_eat" type="time" required></div>
+     <div class="field field-wide"><label for="extra">Anything else we should know? <span class="optional">(optional)</span></label><textarea id="extra" name="additional_notes" rows="3" maxlength="1000" placeholder="Budget range, deadlines, access needs or other useful details"></textarea></div>
+    </div>
+    <label class="booking-consent"><input type="checkbox" name="privacy_acknowledgement" value="Agreed" required><span>I agree that my details may be used to respond to this booking request. I have read the <a href="privacy.html">Privacy Notice</a>. <b>*</b></span></label>
+    <button class="btn primary booking-submit" type="submit">Send booking request <span aria-hidden="true">↗</span></button>
+    <p class="form-footnote">Submitting this form does not confirm an appointment or commit you to a purchase.</p>
+   </form>
+  </div>
+ </section>
+</main>
+<footer class="footer"><div class="container footer-main"><div class="footer-brand"><a class="logo" href="index.html"><span class="logo-mark">KA</span><span class="logo-name">Kastine Augak <b>Soft tech</b></span></a><p>Software, websites, IT support and applied AI solutions.</p><div class="socials"><a href="https://wa.me/256741501270" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="mailto:kastineaugak@gmail.com">Email</a></div></div><div><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Work & projects</a></div><div><h4>Services</h4><a href="bookings.html">Request a booking</a><a href="technology.html">Practice</a><a href="contact.html">Contact</a></div><div><h4>Information</h4><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div><div class="bottom"><div class="container bottom-inner"><span>© <span id="year"></span> Kastine Augak Soft tech</span><a href="privacy.html">Privacy</a></div></div></footer>
+<script src="js/main.js" defer></script>
+<script>
+(function(){
+ const date=document.getElementById('date');
+ const today=new Date();
+ const localToday=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10);
+ date.min=localToday;
+ const meeting=document.getElementById('meeting');
+ const locationField=document.getElementById('location-field');
+ const locationInput=document.getElementById('location');
+ function updateLocationRequirement(){
+  const needsLocation=meeting.value==='In-person appointment';
+  locationInput.required=needsLocation;
+  locationField.classList.toggle('is-required',needsLocation);
+ }
+ meeting.addEventListener('change',updateLocationRequirement);
+ updateLocationRequirement();
+})();
+</script>
+</body>
+</html>
