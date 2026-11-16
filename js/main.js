@@ -1,6 +1,7 @@
 (() => {
 "use strict";
 const $ = id => document.getElementById(id);
+document.documentElement.classList.add("js");
 const menu = $("menu"), nav = $("nav"), topButton = $("top");
 const firstNavLink = nav?.querySelector("a");
 function setMenu(open, moveFocus = false) {
@@ -17,6 +18,9 @@ if (menu && nav) {
   setMenu(!open, !open);
  });
  nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => setMenu(false)));
+ document.addEventListener("pointerdown", e => {
+  if (nav.classList.contains("open") && !e.target.closest(".site-header")) setMenu(false);
+ });
  document.addEventListener("keydown", e => {
   if(e.key==="Escape" && nav.classList.contains("open")){setMenu(false);menu.focus();}
  });
