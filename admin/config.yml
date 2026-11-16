@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: Augak/Kastine-Augak-web
+  branch: main
+
+# Save as a draft pull request. Netlify builds the PR as a deploy preview;
+# publishing merges the reviewed content into main.
+publish_mode: preview
+
+# Keep normal image uploads in the repository. Store large video/audio elsewhere.
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: journal
+    label: Journal
+    label_singular: Article
+    description: Publish articles, project notes, research updates and About Tech stories.
+    folder: content/posts
+    create: true
+    format: json
+    extension: json
+    preview_path: "/journal.html?slug={{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Publication date, name: date, widget: datetime, type: date }
+      - { label: Short summary, name: excerpt, widget: text }
+      - label: Category
+        name: category
+        widget: select
+        options:
+          - About Tech
+          - Projects
+          - Research
+          - Digital Skills
+          - Uganda
+          - Creative Media
+      - { label: Featured image, name: image, widget: image, required: false }
+      - { label: Image description (alt text), name: image_alt, widget: string, required: false }
+      - { label: Tags, name: tags, widget: list, required: false }
+      - { label: Article body, name: body, widget: markdown }
