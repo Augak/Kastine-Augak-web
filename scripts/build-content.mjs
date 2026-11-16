@@ -96,7 +96,7 @@ function requiredText(value, field, slug) {
 function safeImagePath(value, slug) {
   if (value == null || value === '') return '';
   if (typeof value !== 'string') throw new Error(`${slug}: image must be a local upload path.`);
-  const normalized = value.replaceAll('\\\\', '/');
+  const normalized = value.replaceAll('\\', '/');
   if (!/^\/?assets\/uploads\/[a-zA-Z0-9._/-]+$/.test(normalized) || normalized.split('/').includes('..')) {
     throw new Error(`${slug}: image must be inside assets/uploads/.`);
   }
