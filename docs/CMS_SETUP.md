@@ -10,7 +10,9 @@ This repository now includes a Git-backed editorial workspace at `/admin/` using
 - **Build:** `npm run build` validates article records and creates `data/journal.json`.
 - **Public reader:** `journal.html` lists articles and renders an individual article with `?slug=...`.
 - **Authentication:** Sveltia's GitHub backend using Netlify as the OAuth client. No GitHub token or OAuth secret is stored in this repository.
-- **Review:** Preview Workflow creates a draft pull request. Netlify can build the pull request as a Deploy Preview; publishing merges it to `main`.
+- **Review:** Preview Workflow creates a draft pull request. Netlify builds the pull request as a Deploy Preview; publishing merges it to `main`.
+
+Sveltia CMS is currently in beta. Keep its configuration and content workflow under review as the project approaches its 1.0 release.
 
 ## One-time Netlify and GitHub setup
 
@@ -54,6 +56,10 @@ python3 -m http.server 8000
 
 Open `http://localhost:8000/journal.html?demo=1` for the clearly labelled sample preview. To use the actual CMS locally, follow Sveltia's local development workflow and select the repository directory; remote authentication is not required for local-only editing.
 
-## Deployment status
+## Verified deployment status
 
-The Netlify project exists, but its recent deployments were skipped because the account exceeded its credit usage. The code can be tested locally and in GitHub Actions, but the CMS route and Deploy Preview workflow are not live until Netlify can complete a deployment and the OAuth provider is configured.
+- The CMS admin route and public journal page have been deployed successfully to the PR's Netlify Deploy Preview.
+- The preview was browser-tested: the Journal demo card, search/category controls, article navigation, return link and Sveltia GitHub sign-in screen all loaded. The demo article is sample-only and is not published content.
+- The latest GitHub Actions run passed the content tests, journal build and artifact upload.
+- Recent production deploys on the `main` branch were skipped because Netlify reported account credit usage exceeded. The PR Deploy Preview did complete successfully; a production deploy after merging has not been verified.
+- The CMS login screen loads, but an actual GitHub sign-in and content save were not performed. Complete or verify the Netlify GitHub OAuth provider setup before using the editor.
