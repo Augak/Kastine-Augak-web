@@ -26,3 +26,14 @@ If the account uses a different GitHub Pages domain or username, use the URL dis
 ## Netlify
 
 The site can also be deployed on Netlify. For Netlify Forms to work, deploy to Netlify and check the Forms dashboard.
+
+## Kastine CMS and Journal
+
+The Netlify build now generates the public journal index from JSON articles in `content/posts/`. The editorial workspace is served at `/admin/` and uses Sveltia CMS with the GitHub backend. Saving an article opens a draft pull request; Netlify Deploy Previews provide a review link, and publishing merges the article to `main`.
+
+- CMS setup and OAuth instructions: [docs/CMS_SETUP.md](docs/CMS_SETUP.md)
+- Public journal: [journal.html](journal.html)
+- Run local tests: `npm test`
+- Build journal data: `npm run build`
+
+The CMS requires GitHub write access. The OAuth client secret belongs in the Netlify dashboard, never in Git. See the setup guide before enabling editors. GitHub Pages branch publishing does not run the Netlify build command; use Netlify for the CMS publishing workflow.

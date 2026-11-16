@@ -1,0 +1,32 @@
+name: Content build checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run content tests
+        run: npm test
+      - name: Build journal data
+        run: npm run build
+      - name: Upload generated journal data
+        uses: actions/upload-artifact@v4
+        with:
+          name: journal-data
+          path: data/journal.json
+          if-no-files-found: error

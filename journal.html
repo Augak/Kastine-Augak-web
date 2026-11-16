@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Notes on technology, useful digital products, research, creative work and learning from Kastine Augak.">
+  <meta name="author" content="Kastine Augak"><meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#f3f0e7"><title>Journal · Kastine Augak</title>
+  <link rel="canonical" href="https://kamulindwaaugustine.netlify.app/journal.html">
+  <link rel="icon" type="image/png" href="favicon.png"><link rel="stylesheet" href="css/journal.css">
+  <script src="js/journal.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead"><div class="masthead-inner">
+    <a class="brand" href="index.html" aria-label="Kastine Augak home"><span class="brand-mark">KA</span><span>Kastine <strong>Augak</strong></span></a>
+    <nav aria-label="Main navigation" class="main-nav">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Work</a><a href="journal.html" aria-current="page">Journal</a><a href="contact.html">Contact</a>
+    </nav>
+  </div></header>
+  <main id="main" class="page-shell">
+    <section class="journal-heading" aria-labelledby="page-title">
+      <p class="eyebrow">NOTES · IDEAS · FIELD WORK</p>
+      <h1 id="page-title">The Journal</h1>
+      <p id="page-intro" class="intro">Writing about useful technology, building in public, research, digital skills and creative work from Uganda and beyond.</p>
+      <div class="journal-tools" id="journal-tools">
+        <label class="search-label" for="journal-search">Search articles</label>
+        <input id="journal-search" type="search" placeholder="Search titles, summaries and tags" autocomplete="off">
+        <label class="filter-label" for="journal-category">Category</label>
+        <select id="journal-category"><option value="">All categories</option></select>
+      </div>
+    </section>
+    <section id="article-view" class="article-view" hidden aria-labelledby="article-title">
+      <a class="back-link" href="journal.html">← All journal entries</a>
+      <p id="article-category" class="eyebrow"></p><h1 id="article-title"></h1>
+      <p id="article-meta" class="article-meta"></p><p id="article-excerpt" class="article-excerpt"></p>
+      <img id="article-image" class="article-image" alt="" hidden><div id="article-body" class="article-body"></div>
+    </section>
+    <section id="journal-list" aria-labelledby="list-heading">
+      <div class="list-heading-row"><h2 id="list-heading">Latest writing</h2><p id="journal-count" class="result-count" aria-live="polite">Loading articles…</p></div>
+      <div id="journal-grid" class="journal-grid"></div>
+      <div id="journal-empty" class="empty-state" hidden><h3>No articles published yet</h3><p>New articles will appear here after they have been reviewed and published.</p></div>
+    </section>
+    <p id="journal-status" class="status" role="status" aria-live="polite"></p>
+  </main>
+  <footer class="site-footer"><p>© <span id="current-year"></span> Kastine Augak · <a href="privacy.html">Privacy</a> · <a href="contact.html">Contact</a></p></footer>
+</body>
+</html>
