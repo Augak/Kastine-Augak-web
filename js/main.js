@@ -11,6 +11,7 @@ function setMenu(open, moveFocus = false) {
  menu.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
  menu.textContent = open ? "Close" : "Menu";
  if (open && moveFocus) firstNavLink?.focus();
+ if (!open && moveFocus) menu.focus();
 }
 if (menu && nav) {
  menu.addEventListener("click", () => {
@@ -22,7 +23,7 @@ if (menu && nav) {
   if (nav.classList.contains("open") && !e.target.closest(".site-header")) setMenu(false);
  });
  document.addEventListener("keydown", e => {
-  if(e.key==="Escape" && nav.classList.contains("open")){setMenu(false);menu.focus();}
+  if(e.key==="Escape" && nav.classList.contains("open")){setMenu(false,true);}
  });
 }
 const year=$("year"); if(year) year.textContent=new Date().getFullYear();
